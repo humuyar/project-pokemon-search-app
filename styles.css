@@ -14,8 +14,10 @@ img {
 
 body {
   line-height: 1.5;
-  height: 100vh;
-  background-color: #1b1b32;
+  height: 200vh;
+  background-image: url(assecc/images1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #0a0a23;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -28,7 +30,7 @@ main {
 }
 
 h1 {
-  color: #f5f6f7;
+  color: #0c0d0e;
   font-size: 1.7em;
   text-align: center;
 }
@@ -36,10 +38,10 @@ h1 {
 .container {
   width: 325px;
   margin: 25px 0;
-  background-color: #f5f6f7;
-  border: 1px solid #f5f6f7;
+  background-color: #c4c71c;
+  border: 1px solid #b60e0e;
   border-radius: 15px;
-  box-shadow: 10px 10px rgba(223, 220, 220, 0.75);
+  box-shadow: 10px 10px #b62e13;
 }
 
 .output,
@@ -71,7 +73,7 @@ label {
   width: 80px;
   border-radius: 20px;
   text-align: center;
-  background-color: #7f21ab;
+  background-color: #e81313;
   color: #f5f6f7;
   border: none;
 }
@@ -139,7 +141,7 @@ label {
   font-size: 0.7rem;
   text-align: center;
   border-radius: 5px;
-  background-color: red;
+  background-color: rgb(13, 13, 13);
   text-transform: uppercase;
 }
 
@@ -147,15 +149,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  font-size: 1px;
+  font-size: 10px;
   color: #f5f6f7;
-  background-color: #7f21ab;
+  background-color: #e81313;
 }
 
 td,
 th {
   text-align: center;
-  padding: 8px;
+  padding: 10px;
 }
 
 th:nth-child(even),
