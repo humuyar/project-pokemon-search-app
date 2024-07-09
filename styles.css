@@ -39,7 +39,7 @@ h1 {
   background-color: #f5f6f7;
   border: 1px solid #f5f6f7;
   border-radius: 15px;
-  box-shadow: 10px 10px 0px 0px rgba(223, 220, 220, 0.75);
+  box-shadow: 10px 10px rgba(223, 220, 220, 0.75);
 }
 
 .output,
