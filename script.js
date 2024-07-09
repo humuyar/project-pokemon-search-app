@@ -16,9 +16,7 @@ const searchInput = document.getElementById('search-input');
 const getPokemon = async () => {
   try {
     const pokemonNameOrId = searchInput.value.toLowerCase();
-    const response = await fetch(
-      `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`
-    );
+    const response = await fetch( `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`);
     const data = await response.json();
 
     // Set Pokémon info
@@ -67,7 +65,7 @@ const resetDisplay = () => {
   speed.textContent = '';
 };
 
-searchForm.addEventListener('submit', e => {
+searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   getPokemon();
 });
