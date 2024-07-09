@@ -8,10 +8,6 @@
   margin: 0;
 }
 
-body {
-  
-}
-
 img {
   display: block;
 }
@@ -66,11 +62,6 @@ label {
   align-self: center;
 }
 
-#search-input:focus-visible,
-#search-button:focus-visible {
-  outline: 3px solid #198eee;
-}
-
 #search-input {
   height: 40px;
   padding-left: 10px;
@@ -85,6 +76,11 @@ label {
   background-color: #7f21ab;
   color: #f5f6f7;
   border: none;
+}
+
+#search-input:focus-visible,
+#search-button:focus-visible {
+  outline: 3px solid #198eee;
 }
 
 .output {
@@ -153,9 +149,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  font-size: 1 rem;
+  font-size: 1px;
   color: #f5f6f7;
   background-color: #7f21ab;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
 }
 
 th:nth-child(even),
@@ -165,10 +167,4 @@ td:nth-child(even) {
 
 tr {
   border-bottom: 5px solid #f5f6f7;
-}
-
-td,
-th {
-  text-align: center;
-  padding: 8px;
 }
