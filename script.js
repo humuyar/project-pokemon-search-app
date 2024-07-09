@@ -38,13 +38,12 @@ const getPokemon = async () => {
 
     // Set types
     types.innerHTML = data.types
-      .map
-      (obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`)
+      .map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`)
       .join('');
   } catch (err) {
     resetDisplay();
     alert('Pokémon not found!');
-    console.log(`Pokémon not found:(${err})`);
+    console.log(`Pokémon not found:${err}`);
   }
 };
 
