@@ -37,9 +37,7 @@ const getPokemon = async () => {
     speed.textContent = data.stats[5].base_stat;
 
     // Set types
-    types.innerHTML = (data.types
-      .map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`)
-      .join(''));
+    types.innerHTML = (data.types.map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`).join(''));
   } catch (err) {
     const resetDisplay = 0;
     resetDisplay();
@@ -51,6 +49,8 @@ const getPokemon = async () => {
 resetDisplay = () => {
   const sprite = document.getElementById('sprite');
   if (sprite) sprite.remove();
+  console.log(resetDisplay);
+
 
   // reset stats
   pokemonName.textContent = '';
