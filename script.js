@@ -14,7 +14,6 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 
 const getPokemon = async () => {
-  try {
     const pokemonNameOrId = searchInput.value.toLowerCase();
     const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`);
     const data = await response.json();
@@ -24,9 +23,7 @@ const getPokemon = async () => {
     pokemonID.textContent = `#${data.id}`;
     weight.textContent = `Weight: ${data.weight}`;
     height.textContent = `Height: ${data.height}`;
-    spriteContainer.innerHTML = `
-      <img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">
-    `;
+    spriteContainer.innerHTML = `<img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">`;
 
     // Set stats
     hp.textContent = data.stats[0].base_stat;
@@ -38,19 +35,15 @@ const getPokemon = async () => {
 
     // Set types
     types.innerHTML = (data.types.map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`).join(''));
-  } catch (err) {
     const resetDisplay = 0;
-    resetDisplay();
+    resetDisplay(0);
     alert('Pokémon not found!');
     console.log(`Pokémon not found:${err}`);
-  }
 };
 
 resetDisplay = () => {
   const sprite = document.getElementById('sprite');
   if (sprite) sprite.remove();
-  console.log(resetDisplay);
-
 
   // reset stats
   pokemonName.textContent = '';
