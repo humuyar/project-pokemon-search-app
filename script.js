@@ -37,11 +37,11 @@ const getPokemon = async () => {
     speed.textContent = data.stats[5].base_stat;
 
     // Set types
-    types.innerHTML = data.types
+    types.innerHTML = (data.types
       .map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`)
-      .join('');
+      .join(''));
   } catch (err) {
-    const resetDisplay=0;
+    const resetDisplay = 0;
     resetDisplay();
     alert('Pokémon not found!');
     console.log(`Pokémon not found:${err}`);
