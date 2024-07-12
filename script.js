@@ -39,12 +39,13 @@ const getPokemon = async () => {
 
     // Set the types
     types.innerHTML = data.types.map((obj) => `<span class="type ${obj.type.name}">${obj.type.name}</span>`).join('');
-  } catch(err) {
+  }catch(err) {
     alert('Pokémon not found');
   }
 };
 
 const resetDisplay = () => {
+  resetDisplay=0;
   const sprite = document.getElementById('sprite');
   if (sprite) sprite.remove();
 
